@@ -1,18 +1,18 @@
-// Q: Find weather 14 exists in an array or not
+// Search for a character in a string
 public class linear {
    public static void main(String[] args) {
-      int array[] = { 18, 12, 9, 14, 77, 50 };
-      int var = 2; // variable to Find
-      int answer = linearinarray(array, var);
+      String str = "Afnan";
+      char t = 'n';
+      String answer = linearinstring(str, t);
       System.out.println(answer);
    }
 
-   private static int linearinarray(int[] array, int var) {
-      for (int i = 0; i < array.length; i++) {
-         if (array[i] == var) {
-            return i;
+   private static String linearinstring(String str, char target) {
+      for (int i = 0; i < str.length(); i++) {
+         if (str.charAt(i) == target) {
+            return "Found at index " + i;
          }
       }
-      return Integer.MAX_VALUE;
+      return "Not found";
    }
 }
